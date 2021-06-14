@@ -1,0 +1,26 @@
+package com.example.department.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.department.beans.Users;
+import com.example.department.repository.DepartmentRepository;
+import com.example.department.repository.UserClient;
+
+@RestController
+public class DepartmentController {
+	
+	@Autowired
+	DepartmentRepository deptRepo;
+	@Autowired
+	UserClient userClient;
+	
+	@GetMapping("/dept/userDepartment/{deparment}")
+	public Users getUserByDepartment(@PathVariable String department) {
+		Users user = new Users();
+		deptRepo.findById(deparment);
+		return user;
+	}
+}

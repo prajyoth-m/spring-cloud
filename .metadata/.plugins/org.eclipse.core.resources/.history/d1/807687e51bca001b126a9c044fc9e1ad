@@ -1,0 +1,15 @@
+package com.example.department.repository;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.example.department.beans.Users;
+
+@FeignClient(value = "user-services")
+public interface UserClient {
+	@GetMapping("/user/{username}")
+	@HystrixCommand(fallbackMethod = "fallback_hello", commandProperties = {
+			@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000") })
+	Users getUserByName(@PathVariable String username);
+}

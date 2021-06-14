@@ -1,0 +1,6 @@
+package com.example.users.beans;
+
+@Entity
+public class Users {
+
+}

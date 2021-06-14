@@ -1,0 +1,8 @@
+package com.example.department.repository;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("user-services")
+public interface UserClient {
+
+}

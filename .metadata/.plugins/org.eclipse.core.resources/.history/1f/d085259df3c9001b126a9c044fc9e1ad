@@ -1,0 +1,8 @@
+package com.example.users.beans;
+
+@Data
+public class ValidateUser {
+
+	private String username;
+	private Boolean passwordAccepted;
+}
