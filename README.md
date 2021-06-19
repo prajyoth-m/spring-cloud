@@ -17,3 +17,4 @@ Starter project for spring-cloud
 - hibernate-core
 
 ## Archetecture
+![plot](./assets/spring-cloud.png)
