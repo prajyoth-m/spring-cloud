@@ -10,7 +10,10 @@ Starter project for spring-cloud
 - spring-cloud-starter-netflix-eureka-client
 - spring-cloud-starter-openfeign
 - spring-cloud-starter-sleuth
+- spring-cloud-starter-gateway
 ## Regular Dependencies
 - micrometer-registry-prometheus
 - spring-boot-starter-data-jpa
 - hibernate-core
+
+## Archetecture
