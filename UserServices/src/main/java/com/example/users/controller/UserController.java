@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.users.beans.BaseResponse;
 import com.example.users.beans.Users;
 import com.example.users.beans.ValidateUser;
 import com.example.users.repository.UserRepository;
-
 
 @RestController
 public class UserController {
@@ -34,6 +34,19 @@ public class UserController {
 			valid.setPasswordAccepted(Boolean.FALSE);
 		}
 		return valid;
+	}
+
+	@PostMapping("/user")
+	public BaseResponse insertUser(@RequestBody Users user) {
+		BaseResponse resp = new BaseResponse();
+		Users savedUser = userRepo.save(user);
+		if (null != savedUser) {
+			resp.setSuccess(true);
+			resp.setUsername(savedUser.getUsername());
+		} else {
+			resp.setSuccess(false);
+		}
+		return null;
 	}
 
 }

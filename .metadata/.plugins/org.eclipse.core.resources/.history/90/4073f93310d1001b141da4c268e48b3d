@@ -1,0 +1,14 @@
+package com.example.movies.bean;
+
+import javax.persistence.Entity;
+
+@Entity
+@Data
+public class Movies {
+	private String name;
+	private String description;
+	private String image;
+	private String genre;
+	private float rating;
+	private String director;
+}

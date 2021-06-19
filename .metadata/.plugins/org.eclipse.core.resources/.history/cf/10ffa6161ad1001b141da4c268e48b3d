@@ -1,0 +1,7 @@
+package com.example.department.beans;
+
+@Data
+public class BaseResponse {
+	private boolean success;
+	private String department;
+}

@@ -1,0 +1,85 @@
+package com.example.movies.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.movies.bean.Movies;
+
+@Repository
+public class MoviesRepository implements CrudRepository<Movies, String> {
+
+	@Override
+	public <S extends Movies> S save(S entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <S extends Movies> Iterable<S> saveAll(Iterable<S> entities) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Movies> findById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean existsById(String id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Iterable<Movies> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterable<Movies> findAllById(Iterable<String> ids) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void deleteById(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Movies entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAllById(Iterable<? extends String> ids) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAll(Iterable<? extends Movies> entities) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

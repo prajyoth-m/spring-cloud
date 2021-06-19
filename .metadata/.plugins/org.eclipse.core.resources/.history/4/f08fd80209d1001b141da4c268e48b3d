@@ -1,0 +1,9 @@
+spring:
+  application:
+     name: services-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true

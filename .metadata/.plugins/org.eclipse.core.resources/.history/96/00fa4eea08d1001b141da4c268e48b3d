@@ -1,0 +1,9 @@
+spring:
+  application:
+     name: department-services
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
