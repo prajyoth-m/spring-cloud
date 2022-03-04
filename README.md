@@ -1,3 +1,5 @@
+> Note: use JVM args "--add-opens java.base/java.lang.invoke=ALL-UNNAMED" to run the DepartmentServices workaround for the issue with open feign mentioned in this [bug#935](https://github.com/OpenFeign/feign/issues/935)
+
 # spring-cloud
 Starter project for spring-cloud
 ## Technologies
