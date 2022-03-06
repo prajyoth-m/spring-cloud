@@ -68,4 +68,9 @@ public class UserController {
 		return resp; 
 	}
 	
+	@GetMapping("/users")
+	public List<Users> getAllUsers(){
+		return (List<Users>) userRepo.findAll();
+	}
+	
 }
