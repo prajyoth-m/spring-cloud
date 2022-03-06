@@ -1,6 +1,0 @@
-package com.example.movies.bean;
-
-@Entity
-public class Movies {
-
-}

@@ -1,6 +1,0 @@
-package com.example.movies.bean;
-
-@Data
-public class BaseResponse {
-	private boolean success;
-}

@@ -1,9 +1,0 @@
-package com.example.users.repository;
-
-import org.springframework.stereotype.Repository;
-
-import com.example.users.beans.Users;
-
-public class UserRepository extends CrudRepository<Users,String> {
-
-}

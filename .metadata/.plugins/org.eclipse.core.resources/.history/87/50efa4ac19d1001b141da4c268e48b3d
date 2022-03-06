@@ -1,7 +1,0 @@
-package com.example.users.beans;
-
-@Data
-public class BaseResponse {
-	private boolean success;
-	private String username;
-}

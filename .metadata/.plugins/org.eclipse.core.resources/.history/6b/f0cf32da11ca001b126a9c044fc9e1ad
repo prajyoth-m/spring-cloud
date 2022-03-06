@@ -1,7 +1,0 @@
-package com.example.department.beans;
-
-@Data
-@Entity
-public class Departments {
-
-}
