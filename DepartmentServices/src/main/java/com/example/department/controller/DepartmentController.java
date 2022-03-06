@@ -1,5 +1,8 @@
 package com.example.department.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,19 +25,19 @@ public class DepartmentController {
 	UserClient userClient;
 
 	@GetMapping("/dept/userDepartment/{department}")
-	public Users getUserByDepartment(@PathVariable String department) {
-		Users user = new Users();
+	public List<Users> getUserByDepartment(@PathVariable String department) {
+		List<Users> users = new ArrayList<>();
 		Departments dept = deptRepo.findById(department).orElse(null);
 		if (null != dept) {
-			user = userClient.getUserByName(dept.getUsername());
-			user.setDepartment(dept.getDepartment());
+			users = userClient.getUsersByDept(department);
 		}
-		return user;
+		return users;
 	}
 
 	@PostMapping("/department")
 	public BaseResponse insertDepartment(@RequestBody Departments dept) {
 		BaseResponse resp = new BaseResponse();
+		dept.setUsers(0);
 		Departments savedDept = deptRepo.save(dept);
 		if (null != savedDept) {
 			resp.setSuccess(true);
@@ -43,5 +46,10 @@ public class DepartmentController {
 			resp.setSuccess(false);
 		}
 		return resp;
+	}
+	
+	@GetMapping("/department")
+	public List<Departments> getAllDepartments() {
+		return (List<Departments>) deptRepo.findAll();
 	}
 }
